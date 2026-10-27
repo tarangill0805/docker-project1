@@ -1,0 +1,81 @@
+[
+  {
+    "id": "demo-villa",
+    "title": "A home with room to breathe",
+    "city": "Mohali",
+    "type": "Villa",
+    "mode": "buy",
+    "price": "₹1.85 Cr",
+    "area": "2,800 sq ft",
+    "beds": 4,
+    "description": "An illustrative four-bedroom villa with open living spaces, a garden and warm natural finishes. Sample content: confirm actual features, price and availability with the team.",
+    "images": [
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85"
+    ],
+    "demo": 1
+  },
+  {
+    "id": "demo-apartment",
+    "title": "Sunlight, space, a fresh start",
+    "city": "Chandigarh",
+    "type": "Apartment",
+    "mode": "buy",
+    "price": "₹95 Lakh",
+    "area": "1,650 sq ft",
+    "beds": 3,
+    "description": "An illustrative three-bedroom apartment with a bright living area. Sample listing, not an available property advertisement.",
+    "images": [
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=85"
+    ],
+    "demo": 1
+  },
+  {
+    "id": "demo-plot",
+    "title": "Build your own beginning",
+    "city": "Mohali",
+    "type": "Plot",
+    "mode": "buy",
+    "price": "₹72 Lakh",
+    "area": "250 sq yd",
+    "beds": 0,
+    "description": "Illustrative residential plot listing. The image is architectural inspiration and is not a photograph of this plot. Confirm zoning, title and dimensions before purchasing.",
+    "images": [
+      "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=1400&q=85"
+    ],
+    "demo": 1
+  },
+  {
+    "id": "demo-rent",
+    "title": "Your everyday, reimagined",
+    "city": "Mohali",
+    "type": "Apartment",
+    "mode": "rent",
+    "price": "₹28,000 / month",
+    "area": "1,200 sq ft",
+    "beds": 2,
+    "description": "Illustrative rental apartment with two bedrooms and modern living space. This is a sample listing.",
+    "images": [
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85"
+    ],
+    "demo": 1
+  },
+  {
+    "id": "demo-rent-villa",
+    "title": "A quieter kind of living",
+    "city": "Panchkula",
+    "type": "Villa",
+    "mode": "rent",
+    "price": "₹65,000 / month",
+    "area": "2,400 sq ft",
+    "beds": 4,
+    "description": "Illustrative villa rental with generous rooms and a quiet setting. Sample content only.",
+    "images": [
+      "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1400&q=85",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=85"
+    ],
+    "demo": 1
+  }
+]

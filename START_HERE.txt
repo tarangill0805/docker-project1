@@ -1,0 +1,27 @@
+NEW ADDRESS — HTML + CSS + JAVASCRIPT + PYTHON BACKEND
+
+1. Extract the whole ZIP using Windows Extract All.
+2. Install Python 3.11 or newer if not already installed.
+3. Open the extracted New-Address-FullStack folder.
+4. Double-click SETUP_WINDOWS.bat once. Internet is needed for dependencies.
+5. Enter your admin email and choose a password of at least 12 characters.
+   Password typing is hidden; this is normal.
+6. Double-click RUN_WINDOWS.bat.
+7. Open http://127.0.0.1:5000 in your browser.
+8. Admin login: http://127.0.0.1:5000/admin
+
+Keep the server window open. For later use, just run RUN_WINDOWS.bat.
+
+HTML pages: templates/
+CSS styling: static/style.css
+JavaScript animations: static/app.js
+Python backend: app.py
+Database and uploads: instance/ (created automatically)
+
+The HTML pages are served through Python. Do not double-click template files.
+Includes search, property details, protected admin, add/edit/delete listings,
+photo uploads and a private enquiry inbox. Enquiries save to the database;
+automatic email delivery is not configured.
+
+Includes sample listings. Your online website data is not included.
+Read README.md for VS Code commands, phone testing, backups and hosting.
