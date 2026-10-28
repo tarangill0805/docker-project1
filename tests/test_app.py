@@ -25,7 +25,11 @@ class WebsiteTests(unittest.TestCase):
         t=self.token('/admin/login')
         return self.client.post('/admin/login',data={'csrf_token':t,'email':'owner@example.com','password':'test-password-123'})
     def rows(self,sql):
-        with sqlite3.connect(self.app.config['DATABASE']) as conn:return conn.execute(sql).fetchall()
+        conn=sqlite3.connect(self.app.config['DATABASE'])
+        try:
+            return conn.execute(sql).fetchall()
+        finally:
+            conn.close()
     def test_public_filters_and_details(self):
         self.assertEqual(self.client.get('/').status_code,200)
         page=self.client.get('/?mode=rent&city=Mohali&type=Apartment').data

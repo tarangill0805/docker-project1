@@ -41,10 +41,14 @@ def create_app(config=None):
             g.db.row_factory = sqlite3.Row
         return g.db
 
+    def close_current_db():
+        db_conn = g.pop('db', None)
+        if db_conn is not None:
+            db_conn.close()
+
     @app.teardown_appcontext
     def close_db(_):
-        if 'db' in g:
-            g.pop('db').close()
+        close_current_db()
 
     def csrf():
         if 'csrf' not in session:
@@ -100,6 +104,7 @@ CREATE TABLE IF NOT EXISTS attempts (key TEXT PRIMARY KEY,count INTEGER,until RE
                 db().execute('INSERT OR IGNORE INTO properties VALUES (?,?,?,?,?,?,?,?,?,?,?)', tuple(p[k] for k in ['id','title','city','type','mode','price','area','beds','description']) + (json.dumps(p['images']),1))
             db().execute("INSERT INTO settings VALUES ('seeded','yes')")
         db().commit()
+        close_current_db()
 
     def limited(key, limit, seconds):
         now = time.time()
@@ -237,6 +242,7 @@ CREATE TABLE IF NOT EXISTS attempts (key TEXT PRIMARY KEY,count INTEGER,until RE
             raise click.ClickException('Use a valid email and a password with at least 12 characters.')
         db().execute('INSERT OR REPLACE INTO admin VALUES (1,?,?,?)',(email.strip().lower(),generate_password_hash(password),secrets.token_hex(24)))
         db().commit()
+        close_current_db()
         click.echo('Private admin saved. Previous admin sessions invalidated.')
 
     @app.errorhandler(400)

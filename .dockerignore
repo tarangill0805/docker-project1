@@ -1,0 +1,7 @@
+.git
+.venv
+.venv-new
+__pycache__/
+*.py[cod]
+instance/
+tests/
